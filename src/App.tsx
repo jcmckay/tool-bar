@@ -1,6 +1,6 @@
 import React from "react";
 import ToolBar from "./components/tool-bar";
-import logo from "./logo.svg";
+import { ToolBarProvider } from "./contexts/tool-bar";
 import "./App.css";
 
 // tool-bar component
@@ -9,7 +9,9 @@ import "./App.css";
 function App() {
   return (
     <div className="App">
-      <ToolBar />
+      <ToolBarProvider>
+        <ToolBar />
+      </ToolBarProvider>
     </div>
   );
 }
